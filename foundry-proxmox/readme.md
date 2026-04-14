@@ -20,7 +20,7 @@ Installs Foundry Virtual Tabletop in a Debian or Ubuntu LXC on Proxmox.
 ## Run
 
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/alandillon/proxmox_helper_scripts/main/install-foundry.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/alandillon/proxmox_helper_scripts/main/foundry-proxmox/install-foundry.sh)"
 ```
 
 ## Notes
