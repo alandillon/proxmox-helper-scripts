@@ -31,7 +31,7 @@ start
 build_container
 
 msg_info "Running FoundryVTT installer inside the container"
-lxc-attach -n "$CTID" -- bash -c "$(curl -fsSL https://raw.githubusercontent.com/alandillon/proxmox-helper-scripts/refs/heads/main/install/foundryvtt-intall.sh)"
+lxc-attach -n "$CTID" -- bash -c "$(curl -fsSL https://raw.githubusercontent.com/alandillon/proxmox-helper-scripts/main/install/foundryvtt-intall.sh)"
 msg_ok "Completed Successfully"
 
 IP=$(pct exec "$CTID" -- hostname -I | awk '{print $1}')
