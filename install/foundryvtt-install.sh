@@ -37,12 +37,10 @@ systemctl restart container-getty@1.service || true
 if [[ ! -f "$APP_DIR/main.js" ]]; then
   echo "Paste your Foundry VTT Node.js timed download URL:"
   read -r -p "URL: " FOUNDRY_URL
-
   if [[ -z "${FOUNDRY_URL:-}" ]]; then
     echo "No Foundry URL provided"
     exit 1
   fi
-
   su -s /bin/bash -c "cd '$APP_DIR' && wget -O foundryvtt.zip '$FOUNDRY_URL'" "$APP_USER"
   su -s /bin/bash -c "cd '$APP_DIR' && unzip -o foundryvtt.zip && rm -f foundryvtt.zip" "$APP_USER"
 fi
